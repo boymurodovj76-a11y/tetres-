@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Winston Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="classic">
+  <h1>🎮 WINSTON TETRIS</h1>
+  <p class="author">BOYMURODOV JAHONGIR</p>
+
+  <div class="themes">
+    <button data-theme="classic">1. Klassik</button>
+    <button data-theme="neon">2. Neon</button>
+    <button data-theme="colorful">3. Rangli</button>
+  </div>
+
+  <main>
+    <section class="game">
+      <canvas id="board" width="300" height="600"></canvas>
+
+      <aside>
+        <h3>Keyingi shakl</h3>
+        <canvas id="next" width="120" height="120"></canvas>
+        <h3>Ochko: <span id="score">0</span></h3>
+        <h3>Rekord: <span id="best">0</span></h3>
+        <button id="start">▶ Boshlash</button>
+        <button id="pause">⏸ Pauza</button>
+        <p id="message">Dizayn tanlang va boshlang!</p>
+      </aside>
+    </section>
+  </main>
+
+  <div class="controls">
+    <button data-m="left">⬅️</button>
+    <button data-m="rotate">🔄</button>
+    <button data-m="right">➡️</button>
+    <button data-m="down">⬇️</button>
+    <button data-m="drop">⏬</button>
+  </div>
+
+  <footer>© BOYMURODOV JAHONGIR</footer>
+  <script src="script.js"></script>
+</body>
+</html>

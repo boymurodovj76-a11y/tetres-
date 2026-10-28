@@ -1,0 +1,132 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 18px 10px;
+  background: #151922;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  transition: background .3s;
+}
+
+h1 { color: #38e8ff; }
+
+.author, footer {
+  color: #38e8ff;
+  font-weight: bold;
+}
+
+.themes, .controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px auto;
+}
+
+button {
+  padding: 11px 13px;
+  border: 0;
+  border-radius: 9px;
+  background: #087fbd;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:active { transform: scale(.95); }
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#board {
+  display: block;
+  width: min(300px, 90vw);
+  height: auto;
+  background: #080b18;
+  border: 3px solid #38e8ff;
+  border-radius: 8px;
+  touch-action: none;
+}
+
+#next {
+  width: 120px;
+  height: 120px;
+  background: #080b18;
+  border: 2px solid #38e8ff;
+}
+
+aside { min-width: 135px; }
+
+#message {
+  max-width: 170px;
+  font-size: 13px;
+  margin: 12px auto;
+}
+
+.controls button {
+  min-width: 48px;
+  min-height: 46px;
+  font-size: 18px;
+}
+
+footer { margin: 24px 0 8px; }
+
+body.neon {
+  background: #10001e;
+}
+
+body.neon h1,
+body.neon footer,
+body.neon .author {
+  color: #ff38e8;
+  text-shadow: 0 0 12px #ff38e8;
+}
+
+body.neon #board,
+body.neon #next {
+  border-color: #00f7ff;
+  box-shadow: 0 0 16px #00f7ff66;
+}
+
+body.neon button {
+  background: #6e159c;
+  box-shadow: 0 0 8px #d946ef66;
+}
+
+body.colorful {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371, #7b61ff);
+}
+
+body.colorful h1,
+body.colorful footer,
+body.colorful .author {
+  color: #fff;
+  text-shadow: 2px 2px 4px #5b2780;
+}
+
+body.colorful #board,
+body.colorful #next {
+  border-color: #fff36b;
+  box-shadow: 0 0 16px #ffec6e88;
+}
+
+body.colorful button {
+  background: linear-gradient(135deg, #f72585, #4361ee);
+}
+
+@media (max-width: 500px) {
+  .game { gap: 8px; }
+  aside { width: 100%; }
+  aside h3 { display: inline-block; margin: 8px; }
+}
